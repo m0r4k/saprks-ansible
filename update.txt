@@ -1,0 +1,11 @@
+# Upgrade all the Ubuntu servers.
+ansible ubuntu -m apt -a "upgrade=yes update_cache=yes" -b
+
+# Upgrade all the Ubuntu servers.
+ansible debian -m apt -a "upgrade=yes update_cache=yes" -b
+
+# Upgrade all the CentOS servers.
+ansible centos -m yum -a "name=* state=latest" -b
+
+# Upgrade all the Fedora servers.
+ansible fedora -m dnf -a "name=* state=latest" -b

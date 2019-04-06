@@ -1,0 +1,12 @@
+---
+- hosts: all
+
+  sudo: yes
+
+  tasks:
+
+  - name: Install ntpdate
+    apt:
+      name: rdate
+      state: latest
+
